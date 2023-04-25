@@ -9,10 +9,8 @@ const author = document.getElementById('author');
 const addBook = (book) => {
   const bookItem = document.createElement('p');
   bookItem.setAttribute('id', book.id);
-
   const titlePara = document.createElement('p');
   titlePara.textContent = book.title;
-
   const authorPara = document.createElement('p');
   authorPara.textContent = book.author;
 
@@ -56,7 +54,6 @@ const loadBooks = () => {
 // add the item to localstorage
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-
   if (title.value && author.value !== '') {
     const book = {
       id: Math.random() * 1000,
@@ -65,7 +62,6 @@ form.addEventListener('submit', (e) => {
     };
 
     addBook(book);
-
     booksList.push(book);
     localStorage.setItem('booksList', JSON.stringify(booksList));
 
