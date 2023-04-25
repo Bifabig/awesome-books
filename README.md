@@ -222,6 +222,12 @@ Example:
 - Twitter: [@biftu94](https://twitter.com/biftu94)
 - LinkedIn: [Biftu Girma](https://www.linkedin.com/in/biftu-girma-3598a8126/)
 
+👤 **Abdelaziz Soliman**
+
+- GitHub: [@abdelazizsoliman](https://github.com/abdelazizsoliman)
+- Twitter: [@Abdelaz21958317](https://twitter.com/Abdelaz21958317)
+- LinkedIn: [Abdelaziz Soliman](https://www.linkedin.com/in/abdelaziz-soliman-16989b89/)
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
