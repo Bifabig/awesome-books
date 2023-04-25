@@ -101,7 +101,7 @@ After you're finished please remove all the comments and instructions!
 
 <!-- > Add a link to your deployed project. -->
 
-- <a href="https://bifabig.github.io/personal-portfolio-microverse/">Personal Portfolio Live</a>
+- <a href="https://bifabig.github.io/awesome-books/">Live Demo</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -111,7 +111,7 @@ After you're finished please remove all the comments and instructions!
 
 <!-- > Add a link to your video project. -->
 
-<a href="https://www.loom.com/share/8495aedf60f543beae9c2dbdda779123">Get an understanding of the project by watching this video</a>
+Coming soon...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
