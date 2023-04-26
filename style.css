@@ -1,1 +1,39 @@
-/* Awesome Books CSS */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.books {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-collapse: collapse;
+  border: darkslategray solid 2px;
+}
+
+.books tr {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.books td {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.books tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.add-book {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+#add {
+  align-self: flex-end;
+}

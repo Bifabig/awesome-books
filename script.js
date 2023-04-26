@@ -19,14 +19,10 @@ class Book {
   }
 
   addBook() {
-    const bookItem = document.createElement('p');
+    const bookItem = document.createElement('tr');
     bookItem.setAttribute('id', this.id);
-    const titlePara = document.createElement('p');
-    titlePara.textContent = this.title;
-    const authorPara = document.createElement('p');
-    authorPara.textContent = this.author;
-
-    const lineBreak = document.createElement('hr');
+    const titlePara = document.createElement('td');
+    titlePara.textContent = `${this.title} by ${this.author}`;
 
     const books = document.querySelector('.books');
 
@@ -35,10 +31,8 @@ class Book {
     deleteButton.setAttribute('class', 'delete');
     deleteButton.textContent = 'Remove';
 
+    titlePara.appendChild(deleteButton);
     bookItem.appendChild(titlePara);
-    bookItem.appendChild(authorPara);
-    bookItem.appendChild(deleteButton);
-    bookItem.appendChild(lineBreak);
 
     deleteButton.addEventListener('click', () => this.removeBook(this.id));
 
@@ -62,13 +56,30 @@ const author = document.getElementById('author');
 // add the item to localstorage
 const form = document.querySelector('.add-book');
 form.addEventListener('submit', (e) => {
+  const myBook = new Book(title.value, author.value);
   e.preventDefault();
-  const book = new Book(title.value, author.value);
-  book.storeBook();
+  myBook.storeBook();
 
-  book.addBook();
-  booksList.push(book);
+  myBook.addBook();
+  booksList.push(myBook);
   localStorage.setItem('booksList', JSON.stringify(booksList));
 
   form.reset();
+});
+const books = document.querySelector('.books');
+const bookList = JSON.parse(localStorage.getItem('booksList'));
+bookList.forEach((book) => {
+  const currentBooks = document.createElement('tr');
+
+  const currentBook = document.createElement('td');
+  const deleteButton = document.createElement('button');
+  deleteButton.setAttribute('type', 'button');
+  deleteButton.setAttribute('class', 'delete');
+  currentBooks.setAttribute('id', `${book.id}`);
+  deleteButton.textContent = 'Remove';
+  deleteButton.addEventListener('click', () => document.getElementById(book.id).remove());
+  currentBook.textContent = `${book.title} by ${book.author}`;
+  currentBook.append(deleteButton);
+  currentBooks.append(currentBook);
+  books.append(currentBooks);
 });
