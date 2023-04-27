@@ -121,11 +121,16 @@ Coming soon...
 
 <!-- > Describe how a new developer could make use of your project. -->
 
-To get a local copy up and running, follow these steps.
-
 ### Prerequisites
 
-Basic HTML, CSS and JavaScript knowledge
+To get a local copy up and running, follow these steps.
+
+In order to run this project you need:
+
+- A text editor like Microsoft Visual Studio Code.
+- A Github account.
+- Internet Connection.
+- Basic HTML, CSS and JavaScript knowledge.
 
 <!--
 Example command:
@@ -137,12 +142,12 @@ Example command:
 
 ### Setup
 
-Use the '$git clone <code_link>' command and
-clone this repository to your desired folder.
+Clone this repository to your desired folder:
 
-Run the following command on your local machine:
-cd my-folder
-git clone git@github.com:Bifabig/personal-portfolio-microverse.git
+```sh
+  cd my-folder
+  git clone https://github.com/Bifabig/awesome-books.git
+```
 
 <!--
 Example commands:
@@ -155,7 +160,11 @@ Example commands:
 
 ### Install
 
-No installation required
+Run this command inside the cloned repository
+
+```sh
+npm install
+```
 
 <!--
 Example command:
@@ -184,7 +193,17 @@ Example command:
 
 To run tests, run the following command:
 
-No need to run any commands
+For styling
+
+```sh
+  npx stylelint "**/*.{css,scss}"
+```
+
+For JavaScript
+
+```sh
+  npx eslint .
+```
 
 <!--
 Example command:
@@ -222,12 +241,6 @@ Example:
 - Twitter: [@biftu94](https://twitter.com/biftu94)
 - LinkedIn: [Biftu Girma](https://www.linkedin.com/in/biftu-girma-3598a8126/)
 
-👤 **Abdelaziz Soliman**
-
-- GitHub: [@abdelazizsoliman](https://github.com/abdelazizsoliman)
-- Twitter: [@Abdelaz21958317](https://twitter.com/Abdelaz21958317)
-- LinkedIn: [Abdelaziz Soliman](https://www.linkedin.com/in/abdelaziz-soliman-16989b89/)
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
@@ -235,6 +248,12 @@ Example:
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
+
+👤 **Abdelaziz Soliman**
+
+- GitHub: [@abdelazizsoliman](https://github.com/abdelazizsoliman)
+- Twitter: [@Abdelaz21958317](https://twitter.com/Abdelaz21958317)
+- LinkedIn: [Abdelaziz Soliman](https://www.linkedin.com/in/abdelaziz-soliman-16989b89/)
 
 Feel free to check the [issues page](../../issues/).
 
@@ -246,7 +265,7 @@ Feel free to check the [issues page](../../issues/).
 
 <!-- > Give credit to everyone who inspired your codebase. -->
 
-I would like to thank Microverse and my coding partner @mosidrum.
+I would like to thank Microverse and my coding partners.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -255,7 +274,5 @@ I would like to thank Microverse and my coding partner @mosidrum.
 ## 📝 License <a name="license"></a>
 
 This project is [MIT](./LICENSE) licensed.
-
-\_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
