@@ -7,6 +7,7 @@ class Book {
 
   storeBook() {
     let book = {};
+    // add form validation
     if (this.title && this.author !== '') {
       book = {
         id: this.id,
@@ -22,7 +23,7 @@ class Book {
     const bookItem = document.createElement('tr');
     bookItem.setAttribute('id', this.id);
     const titlePara = document.createElement('td');
-    titlePara.textContent = `${this.title} by ${this.author}`;
+    titlePara.textContent = `"${this.title}" by ${this.author}`;
 
     const books = document.querySelector('.books');
 
@@ -61,11 +62,18 @@ const author = document.getElementById('author');
 const form = document.querySelector('.add-book');
 form.addEventListener('submit', (e) => {
   const myBook = new Book(title.value, author.value);
+  const msg = document.querySelector('small');
+
   e.preventDefault();
   myBook.storeBook();
 
-  myBook.addBook();
-  booksList.push(myBook);
+  if (title.value && author.value !== '') {
+    myBook.addBook();
+    booksList.push(myBook);
+    msg.innerText = '';
+  } else {
+    msg.innerText = '* Title and Author required';
+  }
 
   localStorage.setItem('booksList', JSON.stringify(booksList));
 
@@ -82,13 +90,16 @@ booksList.forEach((book) => {
   currentBooks.setAttribute('id', `${book.id}`);
   deleteButton.textContent = 'Remove';
   deleteButton.addEventListener('click', () => {
-    const val = booksList.filter((n) => n.id !== book.id);
-    localStorage.setItem('booksList', JSON.stringify(val));
-    booksList = [...val];
+    const newBooksList = booksList.filter((newBook) => newBook.id !== book.id);
+    localStorage.setItem('booksList', JSON.stringify(newBooksList));
+    booksList = [...newBooksList];
     document.getElementById(book.id).remove();
   });
-  currentBook.textContent = `${book.title} by ${book.author}`;
+  currentBook.textContent = `"${book.title}" by ${book.author}`;
   currentBook.append(deleteButton);
   currentBooks.append(currentBook);
   books.append(currentBooks);
 });
+
+const date = new Date();
+document.getElementById('date-time').innerHTML = date;
