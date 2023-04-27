@@ -63,7 +63,7 @@ After you're finished please remove all the comments and instructions!
 
 <!-- > Describe your project in 1 or 2 sentences. -->
 
-**Awesome Books** is a simple website that takes the title and author values and creates a list of books using JavaScript.
+**Awesome Books** is a simple website that takes the title and author values and creates a list of books using JavaScript DOM and events and classes.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -85,11 +85,8 @@ After you're finished please remove all the comments and instructions!
 
 - **Navbar**
 - **Mobile responsive**
-- **Icons to link to social media**
-- **Animation**
 - **Data Session**
 - **DOM manipulation**
-- **Data Session**
 
 <!-- > Describe between 1-3 key features of the application. -->
 
